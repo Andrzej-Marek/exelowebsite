@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ReactGA from "react-ga";
 import Webasto from "./components/Webasto/Webasto";
+
 ReactGA.initialize("UA-141582838-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 

@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import media from "../../../media";
-import { Container, Row, Col } from "reactstrap";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import phone from "../../../img/phone.png";
-import hamb from "../../../img/hamb.png";
+import { Col, Container, Row } from "reactstrap";
+import styled from "styled-components";
 import cross from "../../../img/cross.png";
+import hamb from "../../../img/hamb.png";
 import logo from "../../../img/logo.png";
+import phone from "../../../img/phone.png";
+import media from "../../../media";
 const Wrapper = styled.div`
   padding: 20px 0;
 

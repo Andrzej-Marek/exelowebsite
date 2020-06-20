@@ -86,115 +86,12 @@ const Prices = ({ history }) => {
     if (error)
       return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
     if (data)
-      return data.airconditions.map(el => (
+      return data.airconditions.map((el) => (
         <StyledRow green key={el.service}>
           <StyledCol xs="9">
             <p>{el.service}</p>
           </StyledCol>
           <StyledCol xs="3">
-            <p>{el.price}</p>
-          </StyledCol>
-        </StyledRow>
-      ));
-  };
-
-  const Wheels = () => {
-    const { loading, error, data } = useQuery(gql`
-      {
-        wheels {
-          service
-          price
-        }
-      }
-    `);
-
-    if (loading) return <Loading />;
-    if (error)
-      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
-    if (data)
-      return data.wheels.map(el => (
-        <StyledRow key={el.service}>
-          <StyledCol xs="8">
-            <p>{el.service}</p>
-          </StyledCol>
-          <StyledCol xs="4">
-            <p>{el.price}</p>
-          </StyledCol>
-        </StyledRow>
-      ));
-  };
-
-  const Wheels4x4 = () => {
-    const { loading, error, data } = useQuery(gql`
-      {
-        wheel4X4s {
-          service
-          price
-        }
-      }
-    `);
-
-    if (loading) return <Loading />;
-    if (error)
-      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
-    if (data)
-      return data.wheel4X4s.map(el => (
-        <StyledRow key={el.service}>
-          <StyledCol xs="8">
-            <p>{el.service}</p>
-          </StyledCol>
-          <StyledCol xs="4">
-            <p>{el.price}</p>
-          </StyledCol>
-        </StyledRow>
-      ));
-  };
-  const WheelBuses = () => {
-    const { loading, error, data } = useQuery(gql`
-      {
-        wheelBuses {
-          service
-          price
-        }
-      }
-    `);
-
-    if (loading) return <Loading />;
-    if (error)
-      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
-    if (data)
-      return data.wheelBuses.map(el => (
-        <StyledRow key={el.service}>
-          <StyledCol xs="8">
-            <p>{el.service}</p>
-          </StyledCol>
-          <StyledCol xs="4">
-            <p>{el.price}</p>
-          </StyledCol>
-        </StyledRow>
-      ));
-  };
-
-  const Batteries = () => {
-    const { loading, error, data } = useQuery(gql`
-      {
-        batteries {
-          text
-          price
-        }
-      }
-    `);
-
-    if (loading) return <Loading />;
-    if (error)
-      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
-    if (data)
-      return data.batteries.map(el => (
-        <StyledRow key={el.text} green>
-          <StyledCol xs="8">
-            <p>{el.text}</p>
-          </StyledCol>
-          <StyledCol xs="4">
             <p>{el.price}</p>
           </StyledCol>
         </StyledRow>
@@ -215,34 +112,8 @@ const Prices = ({ history }) => {
     if (error)
       return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
     if (data)
-      return data.mechanics.map(el => (
+      return data.mechanics.map((el) => (
         <StyledRow key={el.service}>
-          <StyledCol xs="8">
-            <p>{el.service}</p>
-          </StyledCol>
-          <StyledCol xs="4">
-            <p>{el.price}</p>
-          </StyledCol>
-        </StyledRow>
-      ));
-  };
-
-  const Other = () => {
-    const { loading, error, data } = useQuery(gql`
-      {
-        others {
-          service
-          price
-        }
-      }
-    `);
-
-    if (loading) return <Loading />;
-    if (error)
-      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
-    if (data)
-      return data.others.map(el => (
-        <StyledRow green key={el.service}>
           <StyledCol xs="8">
             <p>{el.service}</p>
           </StyledCol>
@@ -270,37 +141,14 @@ const Prices = ({ history }) => {
         <h1>CENNIK</h1>
         <Content>
           <Container>
-            <h2>Wulkanizacja</h2>
-            <h5>Samochody osobowe:</h5>
-            {Wheels()}
-            <h5>Samochody 4x4:</h5>
-            {Wheels4x4()}
-            <h5>Samochody dostawcze:</h5>
-            {WheelBuses()}
-          </Container>
-        </Content>
-        <Content green>
-          <Container>
             <h2>Klimatyzacja</h2>
             {AirCondition()}
           </Container>
         </Content>
-        <Content>
+        <Content green>
           <Container>
             <h2>Mechanika</h2>
             {Mechanic()}
-          </Container>
-        </Content>
-        <Content green>
-          <Container>
-            <h2>Akumulatory</h2>
-            {Batteries()}
-          </Container>
-        </Content>
-        <Content>
-          <Container>
-            <h2>Inne</h2>
-            {Other()}
           </Container>
         </Content>
       </ContentWrapper>

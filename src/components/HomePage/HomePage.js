@@ -9,24 +9,18 @@ import Footer from "../Footer/Footer";
 import PromotionModal from "../PromotionModal/PromotionModal";
 
 const HomePage = ({ history }) => {
-  const [modal, toggleModal] = useState(
-    sessionStorage.getItem("modalOpen") && false
-  );
+  // const [modal, toggleModal] = useState(
+  //   sessionStorage.getItem("modalOpen") && false
+  // );
 
-  const togglePromotionModalHandler = () => {
-    sessionStorage.setItem("modalOpen", "false");
-    toggleModal(false);
-  };
+  // const togglePromotionModalHandler = () => {
+  //   sessionStorage.setItem("modalOpen", "false");
+  //   toggleModal(false);
+  // };
 
-  useEffect(() => {
-    if (sessionStorage.getItem("modalOpen")) return;
-    setTimeout(() => {
-      toggleModal(true);
-    }, 2000);
-  }, []);
   return (
     <>
-      <PromotionModal open={modal} toggle={togglePromotionModalHandler} />
+      {/* <PromotionModal open={modal} toggle={togglePromotionModalHandler} /> */}
       <Header
         text={
           <div>
