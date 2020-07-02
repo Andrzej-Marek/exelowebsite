@@ -123,6 +123,30 @@ const Prices = ({ history }) => {
         </StyledRow>
       ));
   };
+  const SandBlasting = () => {
+    const { loading, error, data } = useQuery(gql`
+      {
+        sandblastings {
+          service
+          price
+        }
+      }
+    `);
+    if (loading) return <Loading />;
+    if (error)
+      return <p>Twoja przeglądarka nie obsługe wersji tej strony :( </p>;
+    if (data)
+      return data.sandblastings.map((el) => (
+        <StyledRow key={el.service}>
+          <StyledCol xs="8">
+            <p>{el.service}</p>
+          </StyledCol>
+          <StyledCol xs="4">
+            <p>{el.price}</p>
+          </StyledCol>
+        </StyledRow>
+      ));
+  };
 
   return (
     <Wrapper>
@@ -149,6 +173,12 @@ const Prices = ({ history }) => {
           <Container>
             <h2>Mechanika</h2>
             {Mechanic()}
+          </Container>
+        </Content>
+        <Content>
+          <Container>
+            <h2>Obróbka strumieniowo-ścierna</h2>
+            {SandBlasting()}
           </Container>
         </Content>
       </ContentWrapper>

@@ -5,7 +5,6 @@ import styled from "styled-components";
 import cross from "../../../img/cross.png";
 import hamb from "../../../img/hamb.png";
 import logo from "../../../img/logo.png";
-import phone from "../../../img/phone.png";
 import media from "../../../media";
 const Wrapper = styled.div`
   padding: 20px 0;
@@ -245,7 +244,9 @@ const NavBar = () => {
               </HambIcon>
               <Telephon>
                 <p>
-                  <img src={phone} alt="" /> <b> +48 794 965 465 </b>
+                  <Link to="/kontakt" style={{ color: "white" }}>
+                    <b> Umów się na wizytę! </b>
+                  </Link>
                 </p>
               </Telephon>
             </StyledCol>
@@ -258,12 +259,22 @@ const NavBar = () => {
               <ul>
                 <li>
                   <StyledLink to="/" onClick={() => toggleActive(false)}>
-                    HOME
+                    STRONA GŁÓWNA
                   </StyledLink>
                 </li>
                 <li>
                   <StyledLink onClick={() => toggleActive(false)} to="/onas">
                     O NAS
+                  </StyledLink>
+                </li>
+                <li>
+                  {" "}
+                  <StyledLink
+                    onClick={() => toggleActive(false)}
+                    to="/ogrzewania"
+                    style={{ textAlign: "center" }}
+                  >
+                    OGRZEWANIA <br /> POSTOJOWE
                   </StyledLink>
                 </li>
                 <li>
@@ -275,16 +286,6 @@ const NavBar = () => {
                   {" "}
                   <StyledLink onClick={() => toggleActive(false)} to="/kontakt">
                     KONTAKT
-                  </StyledLink>
-                </li>
-                <li>
-                  {" "}
-                  <StyledLink
-                    onClick={() => toggleActive(false)}
-                    to="/ogrzewania"
-                    style={{ textAlign: "center" }}
-                  >
-                    OGRZEWANIA <br /> POSTOJOWE
                   </StyledLink>
                 </li>
               </ul>

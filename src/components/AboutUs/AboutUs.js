@@ -3,9 +3,6 @@ import { Container } from "reactstrap";
 import styled from "styled-components";
 import Footer from "../Footer/Footer";
 import Header from "../HomePage/elements/Header";
-import { useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
-import Loading from "../Loading/Loading";
 
 const Wrapper = styled.div``;
 const Content = styled.div`
@@ -65,10 +62,7 @@ const AboutUs = () => {
             krótko mówiąc pełny serwis. Poza tym zajmujemy się{" "}
             <span> naprawami bieżącymi </span>
             pojazdów mechanicznych, jak i elektrycznych oraz wymianą części
-            eksploatacyjnych. Świadczymy również{" "}
-            <span> usługi wulkanizacji </span> oraz serwisu, jak i sprzedaży
-            opon / felg. U nas mogą Państwo również przechować opony / felgi /
-            opony z felgami.
+            eksploatacyjnych.
           </p>
         </Content>
       </Container>

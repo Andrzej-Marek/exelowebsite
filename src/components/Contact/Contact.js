@@ -9,7 +9,7 @@ import {
   Input,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 import Map from "../Map/Map";
 import Footer from "../Footer/Footer";
@@ -139,27 +139,27 @@ const Hours = styled.div`
 `;
 
 const Contact = () => {
-  const [data, setData] = useState({
-    email: "",
-    title: "",
-    message: ""
-  });
-  const [status, setStatus] = useState(false);
-  const { email, title, message } = data;
+  // const [data, setData] = useState({
+  //   email: "",
+  //   title: "",
+  //   message: "",
+  // });
+  // const [status, setStatus] = useState(false);
+  // const { email, title, message } = data;
 
-  const submitHandler = e => {
-    e.preventDefault();
-    if (!email || !title || !message)
-      return window.alert("Musisz wypelnic wszystkie pola");
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   if (!email || !title || !message)
+  //     return window.alert("Musisz wypelnic wszystkie pola");
 
-    Axios.post("sendmail", { ...data })
-      .then(res => {
-        if (res.status === 200) {
-          setStatus(true);
-        }
-      })
-      .catch(err => console.log(err));
-  };
+  //   Axios.post("sendmail", { ...data })
+  //     .then((res) => {
+  //       if (res.status === 200) {
+  //         setStatus(true);
+  //       }
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
   return (
     <Wrapper>
       <Header
@@ -175,16 +175,16 @@ const Contact = () => {
           <Row>
             <Col xs="12" md="6">
               <ContactForm>
-                {status ? (
+                {/* {status ? (
                   <h2>
                     WIADOMOŚĆ WYSŁANA <br /> <span> POMYŚLNIE </span>
                   </h2>
                 ) : (
-                  <>
-                    <h2>
-                      WYŚLIJ NAM <br /> <span> WIADOMOŚĆ </span>
-                    </h2>
-                    <Form onSubmit={submitHandler}>
+                  <> */}
+                <h2>
+                  CHĘTNIE ODPOWIEMY <br /> <span> NA WSZYSTKIE PYTANIA! </span>
+                </h2>
+                {/* <Form onSubmit={submitHandler}>
                       <FormGroup>
                         <Input
                           type="email"
@@ -228,9 +228,9 @@ const Contact = () => {
                         />
                       </FormGroup>
                       <Button>Wyślij !</Button>
-                    </Form>
-                  </>
-                )}
+                    </Form> */}
+                {/* </>
+                )} */}
               </ContactForm>
             </Col>
             <Col xs="12" md="6">

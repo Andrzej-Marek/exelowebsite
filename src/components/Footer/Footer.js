@@ -75,23 +75,23 @@ const Footer = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -117,7 +117,7 @@ const Footer = () => {
       </Content>
       <DownContent>
         <p>
-          Strony internetowe EXELO Andrzej Marek ©&nbsp;2019 All Rights Reserved
+          Strony internetowe EXELO Andrzej Marek ©&nbsp;2020 All Rights Reserved
         </p>
       </DownContent>
     </Wrapper>
