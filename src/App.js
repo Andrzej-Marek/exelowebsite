@@ -9,8 +9,8 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import ReactGA from "react-ga";
 import Webasto from "./components/Webasto/Webasto";
 
-// ReactGA.initialize("UA-141582838-1");
-// ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize("UA-141582838-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700|PT+Serif:400,700&display=swap&subset=cyrillic-ext');
