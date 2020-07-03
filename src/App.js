@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ReactGA from "react-ga";
 import Webasto from "./components/Webasto/Webasto";
+import SandBlasting from "./components/SandBlasting/SandBlasting";
 
 ReactGA.initialize("UA-141582838-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -72,6 +73,7 @@ const App = () => {
           <Route exact path="/kontakt" component={Contact} />
           <Route exact path="/onas" component={AboutUs} />
           <Route exact path="/ogrzewania" component={Webasto} />
+          <Route exact path="/piaskowanie" component={SandBlasting} />
         </Switch>
       </Router>
     </React.Fragment>

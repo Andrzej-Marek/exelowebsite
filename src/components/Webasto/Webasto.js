@@ -64,9 +64,8 @@ const Webasto = () => {
             doświadczeniu, pomożemy <span> dobrać urządzenie </span> dedykowane
             pod samochód jak i spełniające jak najbardziej oczekiwania klienta.
             Posiadamy też w swojej ofercie <span> tanie alternatywy, </span> dla
-            osób mniej wymagających. W celu wycen prosimy o kontakt poprzez{" "}
-            <Link to="/kontakt"> formularz kontakty </Link> lub{" "}
-            <Link to="/kontakt"> kontakt telefoniczny. </Link>
+            osób mniej wymagających. W celu wycen prosimy o{" "}
+            <Link to="/kontakt"> kontakt </Link>
           </p>
 
           <h2>

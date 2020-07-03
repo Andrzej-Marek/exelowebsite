@@ -268,6 +268,14 @@ const NavBar = () => {
                   </StyledLink>
                 </li>
                 <li>
+                  <StyledLink
+                    onClick={() => toggleActive(false)}
+                    to="/piaskowanie"
+                  >
+                    PIASKOWANIE I <br /> SZKIEŁKOWANIE
+                  </StyledLink>
+                </li>
+                <li>
                   {" "}
                   <StyledLink
                     onClick={() => toggleActive(false)}
